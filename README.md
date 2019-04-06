@@ -1,9 +1,10 @@
-Kotlin Data Structure Binary Tree Demo
+Kotlin Data Structure Merkle Tree Demo
 ======================================
 
-二叉树的特点：
+Merkle树的特点：
 
-1. 一个节点的子节点的数量不能超过两个，只能为：0, 1, 2
-2. 子节点有顺序：left, right
+1. 对给出的数据每一个都进行hash，得到叶子节点。如果数据个数为奇数，重复最后一个补全为偶数
+2. 然后对叶子节点两两分为一组，内容加在一起进行hash，得到上一层的节点，如果数量为奇数，则重复最后一个补全为偶数
+3. 对刚得到的上一层节点再进行两两分组并hash的操作，直到得到最后一层，其节点数为1，即为root
 
 Run `Hello.kt` in your IDE.
